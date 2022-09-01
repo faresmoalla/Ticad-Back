@@ -50,8 +50,8 @@ public class User implements Serializable {
 	private String password;
 	private String role;
 
-	@ManyToMany(cascade = CascadeType.PERSIST, fetch
-	= FetchType.EAGER)
+	@ManyToMany(cascade = CascadeType.PERSIST, fetch= FetchType.EAGER)
+	@JsonIgnore
 	private Set<Role> roles;
 	
 
